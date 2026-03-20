@@ -60,7 +60,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 .hero-banner {
     background: linear-gradient(135deg, #1B3A6B 0%, #2D5BA3 50%, #4A90D9 100%);
     border-radius: 16px;
-    padding: 60px 48px;  /* 패딩 조정 */
+    padding: 80px 48px;  /* 패딩 조정 */
     margin-bottom: 32px;
     position: relative;
     overflow: hidden;
@@ -68,14 +68,14 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 }
 .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(48px, 8vw, 140px);
+    font-size: clamp(56px, 8vw, 140px);
     font-weight: 700;
     color: white;
-    margin: 12px 0 0 0;  /* 위아래 마진 조정 */
+    margin: 12px 0 0 0;
     letter-spacing: 2px;
 }
 .hero-sub {
-    font-size: 20px;  /* 18px → 20px 증가 */
+    font-size: 24px;  /* 18px → 20px 증가 */
     color: rgba(255,255,255,0.85);  /* 투명도 조정 */
     margin: 12px 0 0 0;
     font-weight: 300;
