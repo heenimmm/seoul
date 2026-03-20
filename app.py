@@ -18,82 +18,41 @@ st.set_page_config(
 # ─────────────────────────────────────────────
 # 글로벌 CSS
 # ─────────────────────────────────────────────
-st.markdown("""
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:wght@700&display=swap');
-
-/* 전체 배경 */
-.stApp { background-color: #FFF8E7; }
-html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
-
-/* 탭 스타일 */
-.stTabs [data-baseweb="tab-list"] {
-    gap: 0px;
-    background: #1B3A6B;
-    border-radius: 12px 12px 0 0;
-    padding: 6px 6px 0 6px;
-}
-.stTabs [data-baseweb="tab"] {
-    background: transparent;
-    color: rgba(255,255,255,0.65);
-    font-weight: 600;
-    font-size: 15px;
-    padding: 12px 28px;
-    border-radius: 8px 8px 0 0;
-    border: none;
-    letter-spacing: 0.3px;
-    transition: all 0.2s;
-}
-.stTabs [aria-selected="true"] {
-    background: #FFFFFF !important;
-    color: #1B3A6B !important;
-}
-.stTabs [data-baseweb="tab-panel"] {
-    background: #FFFFFF;
-    border-radius: 0 0 12px 12px;
-    border: 1px solid #E5E9F2;
-    padding: 32px 36px;
-}
-
 /* 헤더 배너 */
 .hero-banner {
     background: linear-gradient(135deg, #1B3A6B 0%, #2D5BA3 50%, #4A90D9 100%);
     border-radius: 16px;
-    padding: 52px 48px;
+    padding: 60px 48px;  /* 패딩 조정 */
     margin-bottom: 32px;
     position: relative;
     overflow: hidden;
-}
-.hero-banner::before {
-    content: '';
-    position: absolute;
-    top: -60px; right: -60px;
-    width: 300px; height: 300px;
-    background: rgba(255,255,255,0.06);
-    border-radius: 50%;
-}
-.hero-banner::after {
-    content: '';
-    position: absolute;
-    bottom: -80px; left: 40%;
-    width: 400px; height: 400px;
-    background: rgba(255,255,255,0.04);
-    border-radius: 50%;
+    text-align: center;  /* 추가 */
 }
 .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: 52px;
+    font-size: 64px;  /* 52px → 64px 증가 */
     font-weight: 700;
     color: white;
-    margin: 0;
+    margin: 12px 0 0 0;  /* 위아래 마진 조정 */
     letter-spacing: 2px;
 }
 .hero-sub {
-    font-size: 18px;
-    color: rgba(255,255,255,0.82);
-    margin: 10px 0 0 0;
+    font-size: 20px;  /* 18px → 20px 증가 */
+    color: rgba(255,255,255,0.85);  /* 투명도 조정 */
+    margin: 12px 0 0 0;
     font-weight: 300;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;  /* 자간 증가 */
+}
+.hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.18);
+    color: white;
+    border-radius: 25px;  /* 더 동그란 모양 */
+    padding: 6px 18px;  /* 패딩 증가 */
+    font-size: 13px;
+    margin-bottom: 20px;  /* 아래 여백 증가 */
+    letter-spacing: 1.2px;
+    font-weight: 500;
 }
 .hero-tag {
     display: inline-block;
