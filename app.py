@@ -729,53 +729,59 @@ with tab3:
 
     st.markdown('<hr class="divider">', unsafe_allow_html=True)
 
-    # 전체 매장 연도별 총매출 성장
-    st.markdown('<p class="section-title">📆 연도별 전체 매출 성장 추이</p>', unsafe_allow_html=True)
-    st.caption("전 매장 합산 기준 — 창업 후 매출 성장 패턴을 보여드립니다")
+    # 연도별 매장별 매출 성장 추이
+    st.markdown('<p class="section-title">📆 연도별 매장별 매출 성장 추이</p>', unsafe_allow_html=True)
+    st.caption("선택한 매장의 연도별 매출 변화를 확인하세요")
 
-    monthly_clean["년도"] = monthly_clean["년도-월"].str[:4]
-    yearly = monthly_clean.groupby("년도")[store_cols].sum().sum(axis=1).reset_index()
-    yearly.columns = ["년도","총매출(만원)"]
-    growth = []
-    for i, row in yearly.iterrows():
-        if i == 0:
-            growth.append(None)
-        else:
-            prev = yearly.loc[i-1,"총매출(만원)"]
-            growth.append(round((row["총매출(만원)"]-prev)/prev*100,1))
-    yearly["성장률"] = growth
-
-    fig_year = make_subplots(specs=[[{"secondary_y": True}]])
-    fig_year.add_trace(go.Bar(
-        x=yearly["년도"], y=yearly["총매출(만원)"],
-        name="연간 총매출",
-        marker_color=["#BDD7F5","#4A90D9","#1B3A6B"],
-        text=yearly["총매출(만원)"].apply(lambda v: f"{v:,.0f}만"),
-        textposition="outside",
-        textfont=dict(size=12),
-    ), secondary_y=False)
-    fig_year.add_trace(go.Scatter(
-        x=yearly["년도"][1:], y=yearly["성장률"][1:],
-        name="전년 대비 성장률",
-        line=dict(color="#E8742A", width=2.5),
-        mode="lines+markers+text",
-        marker=dict(size=10),
-        text=[f"+{v}%" for v in yearly["성장률"][1:]],
-        textposition="top center",
-        textfont=dict(size=12, color="#E8742A"),
-    ), secondary_y=True)
-    fig_year.update_layout(
-        plot_bgcolor="white", paper_bgcolor="white",
-        xaxis=dict(showgrid=False),
-        legend=dict(orientation="h", y=1.08),
-        margin=dict(t=20,b=20,l=10,r=10),
-        height=340,
+    # 매장 선택 + 연도 필터
+    col_store, col_year = st.columns(2)
+    
+    with col_store:
+        selected_store_growth = st.selectbox(
+            "📍 매장 선택",
+            store_cols,
+            key="store_growth"
+        )
+    
+    with col_year:
+        year_filter_growth = st.multiselect(
+            "📅 연도 선택",
+            ["2023","2024","2025"],
+            default=["2023","2024","2025"],
+            key="year_growth"
+        )
+    
+    # 선택된 매장의 월별 데이터 필터
+    monthly_store = monthly_clean[
+        (monthly_clean[selected_store_growth].notna()) & 
+        (monthly_clean["년도-월"].str[:4].isin(year_filter_growth))
+    ].copy()
+    
+    # 꺾은선 그래프
+    fig_store_growth = go.Figure()
+    fig_store_growth.add_trace(go.Scatter(
+        x=monthly_store["년도-월"],
+        y=monthly_store[selected_store_growth],
+        name=selected_store_growth,
+        line=dict(color="#1B3A6B", width=3),
+        mode="lines+markers",
+        marker=dict(size=8),
+        fill="tozeroy",
+        fillcolor="rgba(27, 58, 107, 0.2)",
+        hovertemplate=f"<b>{selected_store_growth}</b><br>%{{x}}<br>%{{y:,.0f}}만원<extra></extra>",
+    ))
+    
+    fig_store_growth.update_layout(
+        plot_bgcolor="white",
+        paper_bgcolor="white",
+        xaxis=dict(showgrid=False, tickangle=-45, tickfont=dict(size=10)),
+        yaxis=dict(title="월매출 (만원)", gridcolor="#F0F3F8"),
+        margin=dict(t=20,b=60,l=10,r=10),
+        height=420,
         font=dict(family="Noto Sans KR"),
-        barmode="group",
+        hovermode="x unified",
     )
-    fig_year.update_yaxes(title_text="총매출 (만원)", gridcolor="#F0F3F8", secondary_y=False)
-    fig_year.update_yaxes(title_text="성장률 (%)", showgrid=False, secondary_y=True)
-    st.plotly_chart(fig_year, use_container_width=True)
+    st.plotly_chart(fig_store_growth, use_container_width=True)
 
 
 # ═══════════════════════════════════════════════
