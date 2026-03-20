@@ -271,7 +271,7 @@ top5_names = top_df["매장명"].tolist()[:5]
 # ─────────────────────────────────────────────
 # 공통 헤더
 # ─────────────────────────────────────────────
-st.markdown("""
+st.markdown(r"""
 <div class="hero-banner">
   <div style="text-align: center;">
     <div class="hero-tag">🍦 PREMIUM GELATO FRANCHISE</div>
