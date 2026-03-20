@@ -821,6 +821,7 @@ with tab4:
     with cost_col1:
         # 점포 규모별 비용 테이블
         display_cost = cost_df.copy()
+        display_cost = display_cost.fillna('-')  #
         display_cost.columns = ["항목","소형(10평)","중형(15평)","대형(20평)","비고"]
 
         def highlight_total(row):
