@@ -104,7 +104,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 .hero-sub {
     font-size: 22px;
     color: rgba(255,255,255,0.9);
-    margin-top: 12px
+    margin-top: 12px;
     font-weight: 300;
     letter-spacing: 0.8px;
 }
@@ -118,6 +118,15 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     margin-bottom: 20px;
     letter-spacing: 1.2px;
     font-weight: 500;
+}
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
 }
 
 /* KPI 카드 */
@@ -327,7 +336,7 @@ top5_names = top_df["매장명"].tolist()[:5]
 # ─────────────────────────────────────────────
 st.markdown("""
 <div class="hero-banner">
-  <div style="text-align: center;">
+  <div class="hero-content">
     <div class="hero-tag">🍦 PREMIUM GELATO FRANCHISE</div>
     <h1 class="hero-title">GELATICO</h1>
     <p class="hero-sub">젤라티코 — 이탈리아의 맛, 당신의 매장에서</p>
