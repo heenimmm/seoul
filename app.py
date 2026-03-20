@@ -389,7 +389,7 @@ with tab1:
 
     # 시즌별 매출 패턴 차트
     st.markdown('<p class="section-title">📈 연간 매출 시즌 패턴</p>', unsafe_allow_html=True)
-    st.caption("전 매장 평균 기준 — 여름 시즌(7~8월) 피크, 겨울(1~2월) 저점 패턴")
+    st.caption("전 매장 평균 기준 — 여름 시즌 피크, 겨울 저점 패턴")
 
     monthly_avg = monthly_clean.copy()
     monthly_avg["평균매출"] = monthly_avg[store_cols].mean(axis=1)
