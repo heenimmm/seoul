@@ -142,7 +142,15 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     pointer-events: none;
     z-index: 1;
 }
-
+.hero-banner::before {
+    content: "🍦 ✨ 🍨";
+    position: absolute;
+    top: 18px;
+    right: 28px;
+    font-size: 22px;
+    opacity: 0.22;
+    letter-spacing: 10px;
+}
 /* KPI 카드 */
 .kpi-card {
     background: white;
