@@ -862,7 +862,7 @@ with tab3:
 # ═══════════════════════════════════════════════
 with tab4:
 
-    st.markdown('<p class="section-title">🚀 창업 절차 안내</p>', unsafe_allow_html=True)
+    st.markdown('<p class="section-title">💰 창업 절차 안내</p>', unsafe_allow_html=True)
     st.caption("문의부터 오픈까지 젤라티코 전담팀이 함께합니다")
 
     steps = [
