@@ -76,7 +76,29 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     padding: 0;
     text-align: center;
 }
+.hero-banner::before {
+    content: "🍦 🍨 🍦";
+    position: absolute;
+    top: 20px;
+    right: 40px;
 
+    font-size: 42px;        /* 🔥 크게 */
+    opacity: 0.5;           /* 🔥 더 선명하게 */
+    letter-spacing: 14px;
+
+    transform: rotate(-8deg);  /* 🔥 살짝 기울기 */
+}
+.hero-banner::after {
+    content: "✨ 🍦 ✨";
+    position: absolute;
+    bottom: 18px;
+    left: 30px;
+
+    font-size: 32px;
+    opacity: 0.4;
+
+    transform: rotate(6deg);
+}
 .hero-content {
     position: relative;
     z-index: 2;
