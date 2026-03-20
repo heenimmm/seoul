@@ -56,15 +56,6 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 }
 
 /* 헤더 배너 */
-.hero-banner::before {
-    content: "🍦 ✨ 🍨";
-    position: absolute;
-    top: 18px;
-    right: 28px;
-    font-size: 22px;
-    opacity: 0.22;
-    letter-spacing: 10px;
-}
 .hero-banner {
     background: linear-gradient(135deg,
         #4a2f22 0%,
@@ -162,9 +153,11 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     box-shadow: 0 2px 12px rgba(91,58,41,0.07);
     transition: transform 0.2s, box-shadow 0.2s;
 }
-.kpi-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(91,58,41,0.13);
+.kpi-card:hover,
+.feature-card:hover,
+.menu-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 24px rgba(91,58,41,0.14);
 }
 .kpi-label { font-size: 13px; color: #7A6253; font-weight: 500; margin-bottom: 8px; letter-spacing: 0.3px; }
 .kpi-value { font-size: 30px; font-weight: 800; color: #5B3A29; margin-bottom: 4px; }
@@ -368,7 +361,7 @@ top5_names = top_df["매장명"].tolist()[:5]
 st.markdown("""
 <div class="hero-banner">
   <div class="hero-content">
-    <div class="hero-tag">🍦 PREMIUM GELATO FRANCHISE</div>
+    <div class="hero-tag">🍦 달콤한 창업, 젤라티코와 함</div>
     <h1 class="hero-title">GELATICO</h1>
     <p class="hero-sub">젤라티코 — 이탈리아의 맛, 당신의 매장에서</p>
   </div>
