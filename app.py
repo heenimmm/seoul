@@ -42,8 +42,8 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     background: transparent;
     color: rgba(255,255,255,0.78);
     font-weight: 700;
-    font-size: 18px;           /* 🔥 탭 글씨 키움 */
-    padding: 16px 34px;        /* 🔥 탭 크기 키움 */
+    font-size: 20px;           /* 🔥 탭 글씨 키움 */
+    padding: 18px 40px;        /* 🔥 탭 크기 키움 */
     border-radius: 12px 12px 0 0;
     border: none;
     letter-spacing: 0.2px;
