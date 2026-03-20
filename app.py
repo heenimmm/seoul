@@ -74,17 +74,6 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     padding: 0;
     text-align: center;
 }
-.hero-banner::before {
-    content: "🍦 🍨 ";
-    position: absolute;
-    top: 22px;
-    right: 34px;
-    font-size: 26px;        /* 🔥 크게 */
-    opacity: 0.22;           /* 🔥 더 선명하게 */
-    letter-spacing: 10px;
-    transform: rotate(-6deg);  /* 🔥 살짝 기울기 */
-    z-index: 1;
-}
 .hero-content {
     position: relative;
     z-index: 2;
@@ -99,7 +88,35 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     padding: 32px 24px;
     box-sizing: border-box;
 }
+.hero-pattern {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
 
+.hero-pattern span {
+    position: absolute;
+    font-size: 28px;
+    opacity: 0.16;
+    filter: blur(0.2px);
+}
+
+/* 개별 배치 */
+.hero-pattern span:nth-child(1)  { top: 18%; left: 8%;  transform: rotate(-12deg); }
+.hero-pattern span:nth-child(2)  { top: 10%; left: 22%; transform: rotate(8deg); }
+.hero-pattern span:nth-child(3)  { top: 24%; left: 34%; transform: rotate(-8deg); }
+.hero-pattern span:nth-child(4)  { top: 14%; left: 48%; transform: rotate(10deg); }
+.hero-pattern span:nth-child(5)  { top: 20%; left: 63%; transform: rotate(-10deg); }
+.hero-pattern span:nth-child(6)  { top: 12%; left: 78%; transform: rotate(6deg); }
+
+.hero-pattern span:nth-child(7)  { top: 62%; left: 12%; transform: rotate(12deg); }
+.hero-pattern span:nth-child(8)  { top: 70%; left: 28%; transform: rotate(-6deg); }
+.hero-pattern span:nth-child(9)  { top: 64%; left: 44%; transform: rotate(9deg); }
+.hero-pattern span:nth-child(10) { top: 72%; left: 58%; transform: rotate(-10deg); }
+.hero-pattern span:nth-child(11) { top: 66%; left: 74%; transform: rotate(7deg); }
+.hero-pattern span:nth-child(12) { top: 58%; left: 88%; transform: rotate(-8deg); }
 .hero-title {
     font-family: 'Playfair Display', serif !important;
     font-size: clamp(72px, 9vw, 160px);
@@ -365,6 +382,10 @@ top5_names = top_df["매장명"].tolist()[:5]
 # ─────────────────────────────────────────────
 st.markdown("""
 <div class="hero-banner">
+  <div class="hero-pattern">
+    <span>🍦</span><span>🍨</span><span>✨</span><span>🍓</span><span>🍦</span><span>✨</span>
+    <span>🍨</span><span>🍦</span><span>🍓</span><span>✨</span><span>🍦</span><span>🍨</span>
+  </div>
   <div class="hero-content">
     <div class="hero-tag">🍦 달콤한 창업, 젤라티코와 함께</div>
     <h1 class="hero-title">GELATICO</h1>
