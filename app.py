@@ -98,7 +98,8 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     color: #FFF5E6;
     margin: 0;
     letter-spacing: 3px;
-    text-shadow: 0 6px 30px rgba(0,0,0,0.25);
+    text-shadow: 0 6px 30px rgba(0,0,0,0.25),
+        0 0 20px rgba(255,245,230,0.15);
 }
 .hero-sub {
     font-size: 22px;
