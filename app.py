@@ -59,7 +59,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 .hero-banner {
     background: linear-gradient(135deg, #5B3A29 0%, #8B5E3C 55%, #D9A15B 100%);
     border-radius: 16px;
-    padding: 80px 48px;
+    padding: 60x 40px;
     margin-bottom: 32px;
     position: relative;
     overflow: hidden;
@@ -67,15 +67,16 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 }
 .hero-title {
     font-family: 'Playfair Display', serif !important;
-    font-size: clamp(56px, 8vw, 140px);
+    font-size: clamp(72px, 9vw, 160px);
+    line-height: 1.05;
     font-weight: 700;
-    color: white;
+    color: #FFF5E6;
     margin: 12px 0 0 0;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     text-shadow: 0 6px 30px rgba(0,0,0,0.25);
 }
 .hero-sub {
-    font-size: 24px;
+    font-size: 26px;
     color: rgba(255,255,255,0.85);
     margin: 12px 0 0 0;
     font-weight: 300;
