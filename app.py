@@ -127,6 +127,21 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     font-weight: 500;
     margin: 0;
 }
+.hero-banner::after {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -20%;
+    width: 140%;
+    height: 160%;
+    background: radial-gradient(
+        circle at 70% 30%,
+        rgba(255,255,255,0.25),
+        transparent 60%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
 
 /* KPI 카드 */
 .kpi-card {
