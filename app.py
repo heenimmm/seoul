@@ -56,6 +56,15 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 }
 
 /* 헤더 배너 */
+.hero-banner::before {
+    content: "🍦 ✨ 🍨";
+    position: absolute;
+    top: 18px;
+    right: 28px;
+    font-size: 22px;
+    opacity: 0.22;
+    letter-spacing: 10px;
+}
 .hero-banner {
     background: linear-gradient(135deg,
         #4a2f22 0%,
@@ -142,15 +151,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     pointer-events: none;
     z-index: 1;
 }
-.hero-banner::before {
-    content: "🍦 ✨ 🍨";
-    position: absolute;
-    top: 18px;
-    right: 28px;
-    font-size: 22px;
-    opacity: 0.22;
-    letter-spacing: 10px;
-}
+
 /* KPI 카드 */
 .kpi-card {
     background: white;
