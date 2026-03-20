@@ -73,6 +73,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     color: white;
     margin: 12px 0 0 0;
     letter-spacing: 2px;
+    text-shadow: 0 6px 30px rgba(0,0,0,0.25);
 }
 .hero-sub {
     font-size: 24px;  /* 18px → 20px 증가 */
