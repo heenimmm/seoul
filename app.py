@@ -29,13 +29,13 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 /* 탭 스타일 */
 .stTabs [data-baseweb="tab-list"] {
     gap: 0px;
-    background: #1B3A6B;
+    background: #5B3A29;
     border-radius: 12px 12px 0 0;
     padding: 6px 6px 0 6px;
 }
 .stTabs [data-baseweb="tab"] {
     background: transparent;
-    color: rgba(255,255,255,0.65);
+    color: rgba(255,255,255,0.72);
     font-weight: 600;
     font-size: 15px;
     padding: 12px 28px;
@@ -45,26 +45,26 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     transition: all 0.2s;
 }
 .stTabs [aria-selected="true"] {
-    background: #FFFFFF !important;
-    color: #1B3A6B !important;
+    background: #FFFDF8 !important;
+    color: #5B3A29 !important;
 }
 .stTabs [data-baseweb="tab-panel"] {
-    background: #FFFFFF;
+    background: #FFFDF8;
     border-radius: 0 0 12px 12px;
-    border: 1px solid #E5E9F2;
+    border: 1px solid #E8D8C3;
     padding: 32px 36px;
 }
 
 /* 헤더 배너 */
 /* 헤더 배너 */
 .hero-banner {
-    background: linear-gradient(135deg, #1B3A6B 0%, #2D5BA3 50%, #4A90D9 100%);
+    background: linear-gradient(135deg, #5B3A29 0%, #8B5E3C 55%, #D9A15B 100%);
     border-radius: 16px;
-    padding: 80px 48px;  /* 패딩 조정 */
+    padding: 80px 48px;
     margin-bottom: 32px;
     position: relative;
     overflow: hidden;
-    text-align: center;  /* 추가 */
+    text-align: center;
 }
 .hero-title {
     font-family: 'Poppins', sans-serif !important;
@@ -100,7 +100,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     border-radius: 12px;
     padding: 24px 20px;
     text-align: center;
-    border: 1px solid #E5E9F2;
+    border: 1px solid #E8D8C3;
     box-shadow: 0 2px 12px rgba(27,58,107,0.07);
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -109,17 +109,17 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     box-shadow: 0 8px 24px rgba(27,58,107,0.13);
 }
 .kpi-label { font-size: 13px; color: #7A8BA6; font-weight: 500; margin-bottom: 8px; letter-spacing: 0.3px; }
-.kpi-value { font-size: 30px; font-weight: 800; color: #1B3A6B; margin-bottom: 4px; }
+.kpi-value { font-size: 30px; font-weight: 800; color: #5b3a29; margin-bottom: 4px; }
 .kpi-sub   { font-size: 12px; color: #A0AFBF; }
 
 /* 섹션 제목 */
 .section-title {
     font-size: 22px;
     font-weight: 700;
-    color: #1B3A6B;
+    color: #5B3A29;
     margin: 32px 0 16px 0;
     padding-bottom: 10px;
-    border-bottom: 3px solid #4A90D9;
+    border-bottom: 3px solid #D9A15B;
     display: inline-block;
 }
 
@@ -128,12 +128,12 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     background: white;
     border-radius: 12px;
     padding: 28px 24px;
-    border-left: 4px solid #4A90D9;
+    border-left: 4px solid #D9A15B;
     box-shadow: 0 2px 10px rgba(27,58,107,0.06);
     height: 100%;
 }
 .feature-icon { font-size: 32px; margin-bottom: 12px; }
-.feature-title { font-size: 16px; font-weight: 700; color: #1B3A6B; margin-bottom: 8px; }
+.feature-title { font-size: 16px; font-weight: 700; color: #5b3a29; margin-bottom: 8px; }
 .feature-desc  { font-size: 14px; color: #5A6A7E; line-height: 1.7; }
 
 /* 메뉴 카드 */
@@ -142,13 +142,13 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     border-radius: 14px;
     padding: 24px 20px;
     text-align: center;
-    border: 1px solid #E5E9F2;
+    border: 1px solid #E8D8C3;
     box-shadow: 0 2px 10px rgba(27,58,107,0.06);
     transition: transform 0.2s;
 }
 .menu-card:hover { transform: translateY(-4px); }
 .menu-emoji { font-size: 44px; margin-bottom: 12px; }
-.menu-name  { font-size: 15px; font-weight: 700; color: #1B3A6B; margin-bottom: 6px; }
+.menu-name  { font-size: 15px; font-weight: 700; color: #5b3a29; margin-bottom: 6px; }
 .menu-desc  { font-size: 13px; color: #6A7A8E; margin-bottom: 10px; line-height: 1.5; }
 .menu-badge {
     display: inline-block;
@@ -174,14 +174,14 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     background: white;
     border-radius: 12px;
     padding: 20px 18px;
-    border: 1px solid #E5E9F2;
+    border: 1px solid #E8D8C3;
     box-shadow: 0 2px 8px rgba(27,58,107,0.05);
     position: relative;
     text-align: center;
 }
 .step-num {
     width: 36px; height: 36px;
-    background: #1B3A6B;
+    background: #5b3a29;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -191,13 +191,13 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     font-size: 15px;
     margin: 0 auto 12px auto;
 }
-.step-title { font-size: 14px; font-weight: 700; color: #1B3A6B; margin-bottom: 6px; }
+.step-title { font-size: 14px; font-weight: 700; color: #5b3a29; margin-bottom: 6px; }
 .step-desc  { font-size: 12px; color: #7A8BA6; line-height: 1.5; }
 .step-period {
     margin-top: 8px;
     display: inline-block;
-    background: #EEF4FF;
-    color: #2D5BA3;
+    background: #F7E7D3;
+    color: #8b5e3c;
     border-radius: 10px;
     padding: 2px 10px;
     font-size: 11px;
@@ -206,7 +206,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 
 /* 문의 박스 */
 .contact-box {
-    background: linear-gradient(135deg, #1B3A6B, #2D5BA3);
+    background: linear-gradient(135deg, #5b3a29, #8b5e3c);
     border-radius: 16px;
     padding: 36px 32px;
     color: white;
@@ -218,7 +218,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 
 /* 시뮬레이션 결과 */
 .sim-result {
-    background: linear-gradient(135deg, #1B3A6B, #2D5BA3);
+    background: linear-gradient(135deg, #5b3a29, #8b5e3c);
     border-radius: 14px;
     padding: 28px;
     color: white;
@@ -233,22 +233,22 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     background: white;
     border-radius: 12px;
     padding: 20px;
-    border-top: 4px solid #4A90D9;
+    border-top: 4px solid #D9A15B;
     box-shadow: 0 2px 10px rgba(27,58,107,0.06);
 }
 
 /* 비용 하이라이트 */
 .cost-highlight {
-    background: #EEF4FF;
+    background: #F7E7D3;
     border-radius: 10px;
     padding: 16px 20px;
-    border-left: 4px solid #1B3A6B;
+    border-left: 4px solid #5b3a29;
 }
 
 /* 구분선 */
 .divider {
     border: none;
-    border-top: 1px solid #E5E9F2;
+    border-top: 1px solid #E8D8C3;
     margin: 28px 0;
 }
 </style>
@@ -290,7 +290,7 @@ st.markdown("""
 <div class="hero-banner">
   <div style="text-align: center;">
     <div class="hero-tag">🍦 PREMIUM GELATO FRANCHISE</div>
-    <h1 class="hero-title">GELATICO</p>
+    <h1 class="hero-title">GELATICO</h1>
     <p class="hero-sub">젤라티코 — 이탈리아의 맛, 당신의 매장에서</p>
   </div>
 </div>
@@ -405,12 +405,12 @@ with tab1:
         y=season_avg["평균매출"],
         marker=dict(
             color=season_avg["평균매출"],
-            colorscale=[[0,"#BDD7F5"],[0.5,"#4A90D9"],[1,"#1B3A6B"]],
+            colorscale=[[0,"#BDD7F5"],[0.5,"#D9A15B"],[1,"#5b3a29"]],
             showscale=False,
         ),
         text=season_avg["평균매출"].apply(lambda v: f"{v:,.0f}만"),
         textposition="outside",
-        textfont=dict(size=11, color="#1B3A6B"),
+        textfont=dict(size=11, color="#5b3a29"),
     ))
     fig_season.update_layout(
         plot_bgcolor="white", paper_bgcolor="white",
@@ -449,11 +449,11 @@ with tab2:
     for col, (name, info) in zip(cols, strategies.items()):
         with col:
             st.markdown(f"""
-            <div style="background:{info['color']};border-radius:14px;padding:20px 16px;text-align:center;border:1px solid #E5E9F2;height:100%;">
+            <div style="background:{info['color']};border-radius:14px;padding:20px 16px;text-align:center;border:1px solid #E8D8C3;height:100%;">
               <div style="font-size:32px;margin-bottom:10px;">{info['icon']}</div>
-              <div style="font-size:13px;font-weight:700;color:#1B3A6B;margin-bottom:12px;">{name}</div>
+              <div style="font-size:13px;font-weight:700;color:#5b3a29;margin-bottom:12px;">{name}</div>
               <div style="font-size:11px;color:#7A8BA6;margin-bottom:4px;">월 예산</div>
-              <div style="font-size:16px;font-weight:800;color:#1B3A6B;margin-bottom:10px;">{info['예산']}</div>
+              <div style="font-size:16px;font-weight:800;color:#5b3a29;margin-bottom:10px;">{info['예산']}</div>
               <div style="display:flex;justify-content:space-around;margin-bottom:10px;">
                 <div><div style="font-size:10px;color:#7A8BA6;">유입</div><div style="font-size:14px;font-weight:700;color:#2E9E6B;">{info['유입']}</div></div>
                 <div><div style="font-size:10px;color:#7A8BA6;">매출</div><div style="font-size:14px;font-weight:700;color:#2D7DD2;">{info['매출']}</div></div>
@@ -473,10 +473,10 @@ with tab2:
 
     fig_mkt = go.Figure()
     fig_mkt.add_trace(go.Bar(name="유입 증가율 (%)", x=mkt_names, y=mkt_inflow,
-        marker_color="#4A90D9", text=[f"+{v}%" for v in mkt_inflow],
+        marker_color="#D9A15B", text=[f"+{v}%" for v in mkt_inflow],
         textposition="outside", textfont=dict(size=11)))
     fig_mkt.add_trace(go.Bar(name="매출 상승률 (%)", x=mkt_names, y=mkt_sales,
-        marker_color="#1B3A6B", text=[f"+{v}%" for v in mkt_sales],
+        marker_color="#5b3a29", text=[f"+{v}%" for v in mkt_sales],
         textposition="outside", textfont=dict(size=11)))
     fig_mkt.update_layout(
         barmode="group",
@@ -562,7 +562,7 @@ with tab2:
             labels=["임대료","인건비","재료비","기타(공과금 등)"],
             values=[rent, labor, material, 80],
             hole=0.45,
-            marker=dict(colors=["#1B3A6B","#4A90D9","#7EB8F7","#BDD7F5"]),
+            marker=dict(colors=["#5b3a29","#D9A15B","#7EB8F7","#BDD7F5"]),
             textinfo="label+percent",
             textfont=dict(size=12),
         ))
@@ -583,7 +583,7 @@ with tab2:
             labels=invest_data["비교 항목"].tolist(),
             values=invest_data[cost_col].tolist(),
             hole=0.45,
-            marker=dict(colors=["#1B3A6B","#2D5BA3","#4A90D9","#7EB8F7","#BDD7F5"]),
+            marker=dict(colors=["#5b3a29","#8b5e3c","#D9A15B","#7EB8F7","#BDD7F5"]),
             textinfo="label+percent",
             textfont=dict(size=12),
         ))
@@ -611,20 +611,20 @@ with tab3:
 
     t_cols = st.columns(5)
     medals = ["🥇","🥈","🥉","4️⃣","5️⃣"]
-    medal_colors = ["#FFD700","#C0C0C0","#CD7F32","#4A90D9","#7EB8F7"]
+    medal_colors = ["#FFD700","#C0C0C0","#CD7F32","#D9A15B","#7EB8F7"]
     for col, (_, row), medal, mc in zip(t_cols, top5_df.iterrows(), medals, medal_colors):
         with col:
             name = row["매장명"].replace("젤라또 ","")
             st.markdown(f"""
             <div style="background:white;border-radius:14px;padding:20px 14px;text-align:center;
-                        border-top:4px solid {mc};border:1px solid #E5E9F2;
+                        border-top:4px solid {mc};border:1px solid #E8D8C3;
                         box-shadow:0 2px 10px rgba(27,58,107,0.07);">
               <div style="font-size:28px;margin-bottom:6px;">{medal}</div>
-              <div style="font-size:13px;font-weight:700;color:#1B3A6B;margin-bottom:10px;">{row['매장명']}</div>
+              <div style="font-size:13px;font-weight:700;color:#5b3a29;margin-bottom:10px;">{row['매장명']}</div>
               <div style="font-size:11px;color:#7A8BA6;">총매출</div>
-              <div style="font-size:17px;font-weight:800;color:#1B3A6B;">{int(row['총매출(만원)']):,}만</div>
+              <div style="font-size:17px;font-weight:800;color:#5b3a29;">{int(row['총매출(만원)']):,}만</div>
               <div style="font-size:11px;color:#7A8BA6;margin-top:6px;">월평균</div>
-              <div style="font-size:15px;font-weight:700;color:#4A90D9;">{row['월평균매출(만원)']:,.2f}만</div>
+              <div style="font-size:15px;font-weight:700;color:#D9A15B;">{row['월평균매출(만원)']:,.2f}만</div>
             </div>""", unsafe_allow_html=True)
 
     st.markdown('<hr class="divider">', unsafe_allow_html=True)
@@ -638,7 +638,7 @@ with tab3:
                                   key="year_top5")
     monthly_filtered = monthly_clean[monthly_clean["년도-월"].str[:4].isin(year_filter)]
 
-    colors_top5 = ["#1B3A6B","#4A90D9","#2E9E6B","#E8742A","#9B59B6"]
+    colors_top5 = ["#5b3a29","#D9A15B","#2E9E6B","#E8742A","#9B59B6"]
     fig_line = go.Figure()
     for name, color in zip(top5_names, colors_top5):
         if name in monthly_filtered.columns:
@@ -682,7 +682,7 @@ with tab3:
         y=filtered_base["월매출(만원)"],
         marker=dict(
             color=filtered_base["월매출(만원)"],
-            colorscale=[[0,"#BDD7F5"],[0.5,"#4A90D9"],[1,"#1B3A6B"]],
+            colorscale=[[0,"#BDD7F5"],[0.5,"#D9A15B"],[1,"#5b3a29"]],
             showscale=False,
         ),
         text=filtered_base["월매출(만원)"].apply(lambda v: f"{int(v):,}만"),
@@ -708,14 +708,14 @@ with tab3:
     sangkwon_avg = base_df.groupby("상권 유형")["월매출(만원)"].mean().reset_index()
     sangkwon_avg = sangkwon_avg.sort_values("월매출(만원)", ascending=False)
 
-    sk_colors = {"관광":"#1B3A6B","오피스":"#4A90D9","주거":"#7EB8F7","대학가":"#BDD7F5"}
+    sk_colors = {"관광":"#5b3a29","오피스":"#D9A15B","주거":"#7EB8F7","대학가":"#BDD7F5"}
     fig_sk = go.Figure(go.Bar(
         x=sangkwon_avg["상권 유형"],
         y=sangkwon_avg["월매출(만원)"],
-        marker_color=[sk_colors.get(t,"#4A90D9") for t in sangkwon_avg["상권 유형"]],
+        marker_color=[sk_colors.get(t,"#D9A15B") for t in sangkwon_avg["상권 유형"]],
         text=sangkwon_avg["월매출(만원)"].apply(lambda v: f"{v:,.0f}만원"),
         textposition="outside",
-        textfont=dict(size=13, color="#1B3A6B", family="Noto Sans KR"),
+        textfont=dict(size=13, color="#5b3a29", family="Noto Sans KR"),
         width=0.5,
     ))
     fig_sk.update_layout(
@@ -764,7 +764,7 @@ with tab3:
         x=monthly_store["년도-월"],
         y=monthly_store[selected_store_growth],
         name=selected_store_growth,
-        line=dict(color="#1B3A6B", width=3),
+        line=dict(color="#5b3a29", width=3),
         mode="lines+markers",
         marker=dict(size=8),
         fill="tozeroy",
@@ -810,7 +810,7 @@ with tab4:
             num = steps.index((title, desc, period)) + 1
             st.markdown(f"""
             <div class="step-card">
-              <div style="width:32px;height:32px;background:#1B3A6B;color:white;border-radius:50%;
+              <div style="width:32px;height:32px;background:#5b3a29;color:white;border-radius:50%;
                           display:flex;align-items:center;justify-content:center;
                           font-weight:700;font-size:14px;margin:0 auto 10px auto;">{num}</div>
               <div class="step-title">{title}</div>
@@ -833,7 +833,7 @@ with tab4:
 
         def highlight_total(row):
             if row["항목"] in ["총 초기 투자비"]:
-                return ["background-color:#EEF4FF;font-weight:700;color:#1B3A6B"]*len(row)
+                return ["background-color:#F7E7D3;font-weight:700;color:#5b3a29"]*len(row)
             elif row["항목"] in ["예상 월매출","예상 투자 회수"]:
                 return ["background-color:#F0FBF0;font-weight:600;color:#2E7D32"]*len(row)
             return [""]*len(row)
@@ -841,10 +841,10 @@ with tab4:
         styled = display_cost.style.apply(highlight_total, axis=1)\
             .set_properties(**{"font-size":"13px","text-align":"center"})\
             .set_table_styles([
-                {"selector":"thead th","props":[("background","#1B3A6B"),("color","white"),
+                {"selector":"thead th","props":[("background","#5b3a29"),("color","white"),
                                                  ("font-size","13px"),("text-align","center"),
                                                  ("padding","10px")]},
-                {"selector":"tbody td","props":[("padding","8px 12px"),("border","1px solid #E5E9F2")]},
+                {"selector":"tbody td","props":[("padding","8px 12px"),("border","1px solid #E8D8C3")]},
             ])
         st.dataframe(styled, use_container_width=True, hide_index=True)
 
@@ -853,14 +853,14 @@ with tab4:
         fig_cost = go.Figure(go.Bar(
             x=["소형(10평)","중형(15평)","대형(20평)"],
             y=[5500, 7300, 9700],
-            marker_color=["#BDD7F5","#4A90D9","#1B3A6B"],
+            marker_color=["#BDD7F5","#D9A15B","#5b3a29"],
             text=["5,500만원","7,300만원","9,700만원"],
             textposition="outside",
-            textfont=dict(size=12, color="#1B3A6B"),
+            textfont=dict(size=12, color="#5b3a29"),
             width=0.5,
         ))
         fig_cost.update_layout(
-            title=dict(text="점포 규모별 총 초기 투자비", font=dict(size=14,color="#1B3A6B")),
+            title=dict(text="점포 규모별 총 초기 투자비", font=dict(size=14,color="#5b3a29")),
             plot_bgcolor="white", paper_bgcolor="white",
             xaxis=dict(showgrid=False),
             yaxis=dict(title="투자비 (만원)", gridcolor="#F0F3F8", range=[0,12000]),
@@ -877,20 +877,20 @@ with tab4:
 
     sk_icons = {"오피스 상권":"🏢","대학가 상권":"🎓","주거 상권":"🏘️","관광 상권":"🗼"}
     sk_colors_card = {"오피스 상권":"#E8F4FD","대학가 상권":"#F0FBF0","주거 상권":"#FFF7E8","관광 상권":"#F5F0FF"}
-    sk_border = {"오피스 상권":"#4A90D9","대학가 상권":"#2E9E6B","주거 상권":"#E8742A","관광 상권":"#9B59B6"}
+    sk_border = {"오피스 상권":"#D9A15B","대학가 상권":"#2E9E6B","주거 상권":"#E8742A","관광 상권":"#9B59B6"}
 
     sk_cols = st.columns(4)
     for col, (_, row) in zip(sk_cols, district_df.iterrows()):
         sk_type = row["상권 유형"]
         icon = sk_icons.get(sk_type, "📍")
         bg   = sk_colors_card.get(sk_type, "#F8F9FC")
-        br   = sk_border.get(sk_type, "#4A90D9")
+        br   = sk_border.get(sk_type, "#D9A15B")
         with col:
             st.markdown(f"""
             <div style="background:{bg};border-radius:14px;padding:20px 16px;
-                        border-top:4px solid {br};border:1px solid #E5E9F2;">
+                        border-top:4px solid {br};border:1px solid #E8D8C3;">
               <div style="font-size:28px;margin-bottom:8px;">{icon}</div>
-              <div style="font-size:14px;font-weight:700;color:#1B3A6B;margin-bottom:12px;">{sk_type}</div>
+              <div style="font-size:14px;font-weight:700;color:#5b3a29;margin-bottom:12px;">{sk_type}</div>
               <div style="font-size:12px;color:#5A6A7E;line-height:1.9;">
                 👥 {row['주 고객층']}<br>
                 🚶 일평균 {int(row['일평균 유동인구(명)']):,}명<br>
@@ -927,9 +927,9 @@ with tab4:
 
     with contact_r:
         st.markdown("""
-        <div style="background:white;border-radius:16px;padding:32px;border:1px solid #E5E9F2;
+        <div style="background:white;border-radius:16px;padding:32px;border:1px solid #E8D8C3;
                     box-shadow:0 2px 12px rgba(27,58,107,0.07);">
-          <div style="font-size:16px;font-weight:700;color:#1B3A6B;margin-bottom:20px;">📝 간편 온라인 문의</div>
+          <div style="font-size:16px;font-weight:700;color:#5b3a29;margin-bottom:20px;">📝 간편 온라인 문의</div>
         """, unsafe_allow_html=True)
 
         name_input    = st.text_input("성함", placeholder="홍길동")
@@ -949,8 +949,8 @@ with tab4:
     st.markdown("<br><br>", unsafe_allow_html=True)
     st.markdown("""
     <div style="text-align:center;padding:24px;color:#A0AFBF;font-size:13px;
-                border-top:1px solid #E5E9F2;margin-top:20px;">
-      <b style="color:#1B3A6B;font-size:16px;">GELATICO 젤라티코</b><br>
+                border-top:1px solid #E8D8C3;margin-top:20px;">
+      <b style="color:#5b3a29;font-size:16px;">GELATICO 젤라티코</b><br>
       이탈리아의 맛, 당신의 매장에서 — Taste of Italy, In Your Hands<br><br>
       © 2025 Gelatico Franchise. All rights reserved. | 가상 프로젝트 (바이브 코딩 실습)
     </div>
