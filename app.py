@@ -68,7 +68,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 }
 .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: 64px;  /* 52px → 64px 증가 */
+    font-size: 128px;  /* 52px → 64px 증가 */
     font-weight: 700;
     color: white;
     margin: 12px 0 0 0;  /* 위아래 마진 조정 */
