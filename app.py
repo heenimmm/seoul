@@ -64,50 +64,58 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
         #D9A15B 100%
     );
     border-radius: 16px;
-    padding: 0;
     min-height: 260px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 28px;
     position: relative;
     overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
     text-align: center;
 }
-.hero-banner::after {
-    content: "";
-    position: absolute;
-    top: -30%;
-    left: -20%;
-    width: 140%;
-    height: 160%;
 
-    background: radial-gradient(
-        circle at 70% 30%,
-        rgba(255,255,255,0.25),
-        transparent 60%
-    );
+.hero-content {
+    position: relative;
+    z-index: 2;
 
-    pointer-events: none;
+    width: 100%;
+    max-width: 900px;
+    min-height: 260px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    padding: 32px 24px;
+    box-sizing: border-box;
 }
+
 .hero-title {
     font-family: 'Playfair Display', serif !important;
     font-size: clamp(72px, 9vw, 160px);
-    line-height: 1.1;
+    line-height: 1;
     font-weight: 700;
     color: #FFF5E6;
     margin: 0;
     letter-spacing: 3px;
-    text-shadow: 0 6px 30px rgba(0,0,0,0.25),
+    text-shadow:
+        0 6px 30px rgba(0,0,0,0.25),
         0 0 20px rgba(255,245,230,0.15);
 }
+
 .hero-sub {
     font-size: 22px;
     color: rgba(255,255,255,0.9);
-    margin-top: 12px;
+    margin: 0;
     font-weight: 300;
     letter-spacing: 0.8px;
 }
+
 .hero-tag {
     display: inline-block;
     background: rgba(255,255,255,0.18);
@@ -115,18 +123,9 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     border-radius: 25px;
     padding: 6px 18px;
     font-size: 13px;
-    margin-bottom: 20px;
     letter-spacing: 1.2px;
     font-weight: 500;
-}
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    height: 100%;
+    margin: 0;
 }
 
 /* KPI 카드 */
