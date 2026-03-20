@@ -57,7 +57,12 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 
 /* 헤더 배너 */
 .hero-banner {
-    background: linear-gradient(135deg, #5B3A29 0%, #8B5E3C 55%, #D9A15B 100%);
+    background: linear-gradient(135deg,
+        #4a2f22 0%,
+        #5B3A29 30%,
+        #8B5E3C 65%,
+        #D9A15B 100%
+    );
     border-radius: 16px;
     padding: 0;
     min-height: 260px;
@@ -68,6 +73,22 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     position: relative;
     overflow: hidden;
     text-align: center;
+}
+.hero-banner::after {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -20%;
+    width: 140%;
+    height: 160%;
+
+    background: radial-gradient(
+        circle at 70% 30%,
+        rgba(255,255,255,0.25),
+        transparent 60%
+    );
+
+    pointer-events: none;
 }
 .hero-title {
     font-family: 'Playfair Display', serif !important;
