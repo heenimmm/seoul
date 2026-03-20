@@ -23,7 +23,7 @@ st.markdown("""
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:wght@700&display=swap');
 
 /* 전체 배경 */
-.stApp { background-color: #F8F9FC; }
+.stApp { background-color: #FFF8E7; }
 html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 
 /* 탭 스타일 */
