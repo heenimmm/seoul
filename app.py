@@ -300,7 +300,29 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     border-top: 1px solid #E8D8C3;
     margin: 28px 0;
 }
+.stApp {
+    background: linear-gradient(
+        180deg,
+        #FFF8E7 0%,
+        #F7E7D3 40%,
+        #F3E1CC 100%
+    );
+    position: relative;
+    z-index: 1;
+}
 
+.stApp::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(
+        circle at 20% 10%,
+        rgba(255, 240, 220, 0.4),
+        transparent 40%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
 /* 모바일 대응 */
 @media (max-width: 768px) {
     .hero-banner {
