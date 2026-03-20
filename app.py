@@ -64,7 +64,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
         #D9A15B 100%
     );
     border-radius: 16px;
-    min-height: 260px;
+    min-height: 200px;
     margin-bottom: 28px;
     position: relative;
     overflow: hidden;
@@ -83,7 +83,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 
     width: 100%;
     max-width: 900px;
-    min-height: 260px;
+    min-height: 200px;
 
     display: flex;
     flex-direction: column;
@@ -111,7 +111,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 .hero-sub {
     font-size: 22px;
     color: rgba(255,255,255,0.9);
-    margin: 12px;
+    margin: 0px;
     font-weight: 300;
     letter-spacing: 0.8px;
 }
