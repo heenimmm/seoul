@@ -111,7 +111,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 .hero-sub {
     font-size: 22px;
     color: rgba(255,255,255,0.9);
-    margin: 0;
+    margin: 12px;
     font-weight: 300;
     letter-spacing: 0.8px;
 }
