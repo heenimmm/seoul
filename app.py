@@ -546,7 +546,7 @@ with tab2:
 
     st.markdown("<br>", unsafe_allow_html=True)
     r1, r2, r3, r4, r5 = st.columns(5)
-   sim_items = [
+       sim_items = [
     ("예상 월매출",     f"{est_sales:,}만원"),
     ("예상 고정비",     f"{fixed_cost:,}만원"),
     ("예상 순이익",     f"{net_profit:,}만원"),
