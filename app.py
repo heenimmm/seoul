@@ -55,46 +55,59 @@ st.set_page_config(
     font-weight: 500;
 }
 .hero-tag {
-    display: inline-block;
-    background: rgba(255,255,255,0.18);
+/* 헤더 배너 */
+.hero-banner {
+    background: linear-gradient(135deg, #1B3A6B 0%, #2D5BA3 50%, #4A90D9 100%);
+    border-radius: 16px;
+    padding: 70px 48px;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+}
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 300px; height: 300px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 50%;
+}
+.hero-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 40%;
+    width: 400px; height: 400px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+}
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 68px;
+    font-weight: 700;
     color: white;
-    border-radius: 20px;
-    padding: 4px 14px;
+    margin: 16px 0 8px 0;
+    letter-spacing: 2.5px;
+    text-align: center;
+}
+.hero-sub {
+    font-size: 20px;
+    color: rgba(255,255,255,0.88);
+    margin: 12px 0 0 0;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    text-align: center;
+}
+.hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border-radius: 25px;
+    padding: 8px 20px;
     font-size: 13px;
     margin-bottom: 16px;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     font-weight: 500;
 }
-
-/* KPI 카드 */
-.kpi-card {
-    background: white;
-    border-radius: 12px;
-    padding: 24px 20px;
-    text-align: center;
-    border: 1px solid #E5E9F2;
-    box-shadow: 0 2px 12px rgba(27,58,107,0.07);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.kpi-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(27,58,107,0.13);
-}
-.kpi-label { font-size: 13px; color: #7A8BA6; font-weight: 500; margin-bottom: 8px; letter-spacing: 0.3px; }
-.kpi-value { font-size: 30px; font-weight: 800; color: #1B3A6B; margin-bottom: 4px; }
-.kpi-sub   { font-size: 12px; color: #A0AFBF; }
-
-/* 섹션 제목 */
-.section-title {
-    font-size: 22px;
-    font-weight: 700;
-    color: #1B3A6B;
-    margin: 32px 0 16px 0;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #4A90D9;
-    display: inline-block;
-}
-
 /* 브랜드 특징 카드 */
 .feature-card {
     background: white;
@@ -299,13 +312,15 @@ with tab1:
     for col, label, value, sub in cards:
         with col:
             st.markdown(f"""
-            <div class="kpi-card">
-              <div class="kpi-label">{label}</div>
-              <div class="kpi-value">{value}</div>
-              <div class="kpi-sub">{sub}</div>
-            </div>""", unsafe_allow_html=True)
-
-    st.markdown('<hr class="divider">', unsafe_allow_html=True)
+st.markdown("""
+<div class="hero-banner">
+  <div style="text-align: center;">
+    <div class="hero-tag">🍦 PREMIUM GELATO FRANCHISE</div>
+    <p class="hero-title">GELATICO</p>
+    <p class="hero-sub">젤라티코 — 이탈리아의 맛, 당신의 매장에서</p>
+  </div>
+</div>
+""", unsafe_allow_html=True)
 
     # 브랜드 소개
     st.markdown('<p class="section-title">✦ 브랜드 소개</p>', unsafe_allow_html=True)
