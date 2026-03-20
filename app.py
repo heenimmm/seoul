@@ -68,51 +68,34 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     margin-bottom: 28px;
     position: relative;
     overflow: hidden;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: 0;
     text-align: center;
 }
 .hero-banner::before {
-    content: "🍦 🍨 🍦";
+    content: "🍦 🍨 ";
     position: absolute;
-    top: 20px;
-    right: 40px;
-
-    font-size: 42px;        /* 🔥 크게 */
-    opacity: 0.5;           /* 🔥 더 선명하게 */
-    letter-spacing: 14px;
-
-    transform: rotate(-8deg);  /* 🔥 살짝 기울기 */
-}
-.hero-banner::after {
-    content: "✨ 🍦 ✨";
-    position: absolute;
-    bottom: 18px;
-    left: 30px;
-
-    font-size: 32px;
-    opacity: 0.4;
-
-    transform: rotate(6deg);
+    top: 22px;
+    right: 34px;
+    font-size: 26px;        /* 🔥 크게 */
+    opacity: 0.22;           /* 🔥 더 선명하게 */
+    letter-spacing: 10px;
+    transform: rotate(-6deg);  /* 🔥 살짝 기울기 */
+    z-index: 1;
 }
 .hero-content {
     position: relative;
     z-index: 2;
-
     width: 100%;
     max-width: 900px;
     min-height: 200px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 16px;
-
+    gap: 14px;
     padding: 32px 24px;
     box-sizing: border-box;
 }
@@ -126,16 +109,16 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     margin: 0;
     letter-spacing: 3px;
     text-shadow:
-        0 6px 30px rgba(0,0,0,0.25),
-        0 0 20px rgba(255,245,230,0.15);
+        0 6px 24px rgba(0,0,0,0.18),
+        0 0 12px rgba(255,245,230,0.18);
 }
 
 .hero-sub {
     font-size: 22px;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255,255,255,0.92);
     margin: 0px;
     font-weight: 300;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.6px;
 }
 
 .hero-tag {
@@ -145,7 +128,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     border-radius: 25px;
     padding: 6px 18px;
     font-size: 13px;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
     font-weight: 500;
     margin: 0;
 }
@@ -158,7 +141,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     height: 160%;
     background: radial-gradient(
         circle at 70% 30%,
-        rgba(255,255,255,0.25),
+        rgba(255,255,255,0.16),
         transparent 60%
     );
     pointer-events: none;
