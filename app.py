@@ -15,6 +15,10 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
+st.markdown(r"""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:wght@700&display=swap');
+
 # ─────────────────────────────────────────────
 # 글로벌 CSS
 # ─────────────────────────────────────────────
@@ -271,7 +275,7 @@ top5_names = top_df["매장명"].tolist()[:5]
 # ─────────────────────────────────────────────
 # 공통 헤더
 # ─────────────────────────────────────────────
-st.markdown(r"""
+st.markdown("""
 <div class="hero-banner">
   <div style="text-align: center;">
     <div class="hero-tag">🍦 PREMIUM GELATO FRANCHISE</div>
