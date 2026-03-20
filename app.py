@@ -56,54 +56,40 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 }
 
 /* 헤더 배너 */
+/* 헤더 배너 */
 .hero-banner {
     background: linear-gradient(135deg, #1B3A6B 0%, #2D5BA3 50%, #4A90D9 100%);
     border-radius: 16px;
-    padding: 52px 48px;
+    padding: 60px 48px;  /* 패딩 조정 */
     margin-bottom: 32px;
     position: relative;
     overflow: hidden;
-}
-.hero-banner::before {
-    content: '';
-    position: absolute;
-    top: -60px; right: -60px;
-    width: 300px; height: 300px;
-    background: rgba(255,255,255,0.06);
-    border-radius: 50%;
-}
-.hero-banner::after {
-    content: '';
-    position: absolute;
-    bottom: -80px; left: 40%;
-    width: 400px; height: 400px;
-    background: rgba(255,255,255,0.04);
-    border-radius: 50%;
+    text-align: center;  /* 추가 */
 }
 .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: 52px;
+    font-size: 64px;  /* 52px → 64px 증가 */
     font-weight: 700;
     color: white;
-    margin: 0;
+    margin: 12px 0 0 0;  /* 위아래 마진 조정 */
     letter-spacing: 2px;
 }
 .hero-sub {
-    font-size: 18px;
-    color: rgba(255,255,255,0.82);
-    margin: 10px 0 0 0;
+    font-size: 20px;  /* 18px → 20px 증가 */
+    color: rgba(255,255,255,0.85);  /* 투명도 조정 */
+    margin: 12px 0 0 0;
     font-weight: 300;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;  /* 자간 증가 */
 }
 .hero-tag {
     display: inline-block;
     background: rgba(255,255,255,0.18);
     color: white;
-    border-radius: 20px;
-    padding: 4px 14px;
+    border-radius: 25px;  /* 더 동그란 모양 */
+    padding: 6px 18px;  /* 패딩 증가 */
     font-size: 13px;
-    margin-bottom: 16px;
-    letter-spacing: 1px;
+    margin-bottom: 20px;  /* 아래 여백 증가 */
+    letter-spacing: 1.2px;
     font-weight: 500;
 }
 
