@@ -547,11 +547,11 @@ with tab2:
     st.markdown("<br>", unsafe_allow_html=True)
     r1, r2, r3, r4, r5 = st.columns(5)
     sim_items = [
-        (r1, "예상 월매출",     f"{est_sales:,}만원"),
-        (r2, "예상 고정비",     f"{fixed_cost:,}만원"),
-        (r3, "예상 순이익",     f"{net_profit:,}만원"),
-        (r4, "초기 투자비",     f"{s['invest']:,}만원"),
-        (r5, "예상 회수 기간",  f"{recovery}개월"),
+    ("예상 월매출",     f"{est_sales:,}만원"),
+    ("예상 고정비",     f"{fixed_cost:,}만원"),
+    ("예상 순이익",     f"{net_profit:,}만원"),
+    ("초기 투자비",     f"{s['invest']:,}만원"),
+    ("예상 회수 기간",  f"{recovery}개월"),
     ]
     for col, (label, value) in zip([r1,r2,r3,r4,r5], sim_items):
         with col:
