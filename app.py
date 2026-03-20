@@ -67,7 +67,7 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     text-align: center;  /* 추가 */
 }
 .hero-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif !important;
     font-size: clamp(56px, 8vw, 140px);
     font-weight: 700;
     color: white;
