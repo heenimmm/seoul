@@ -417,7 +417,7 @@ with tab1:
         y=season_avg["평균매출"],
         marker=dict(
             color=season_avg["평균매출"],
-            colorscale=[[0,"#BDD7F5"],[0.5,"#D9A15B"],[1,"#5b3a29"]],
+            colorscale=[[0,"#F3D2A7"],[0.5,"#D9A15B"],[1,"#5b3a29"]],
             showscale=False,
         ),
         text=season_avg["평균매출"].apply(lambda v: f"{v:,.0f}만"),
@@ -450,11 +450,11 @@ with tab2:
 
     # 마케팅 전략 카드
     strategies = {
-        "인스타그램 광고":     {"예산":"80만원", "유입":"+18%", "매출":"+12%", "상권":"대학가, 관광", "icon":"📸", "color":"#E8F4FD"},
-        "지역 체험단 운영":    {"예산":"50만원", "유입":"+22%", "매출":"+15%", "상권":"주거, 오피스",  "icon":"👥", "color":"#F0FBF0"},
+        "인스타그램 광고":     {"예산":"80만원", "유입":"+18%", "매출":"+12%", "상권":"대학가, 관광", "icon":"📸", "color":"#F7E7D3"},
+        "지역 체험단 운영":    {"예산":"50만원", "유입":"+22%", "매출":"+15%", "상권":"주거, 오피스",  "icon":"👥", "color":"#F3E1CC"},
         "오픈 프로모션":       {"예산":"120만원","유입":"+35%", "매출":"+28%", "상권":"전 상권(초반)", "icon":"🎉", "color":"#FFF7E8"},
         "배달앱 할인 이벤트":  {"예산":"60만원", "유입":"+25%", "매출":"+18%", "상권":"주거, 오피스",  "icon":"🛵", "color":"#FFF0F0"},
-        "시즌 한정 메뉴 출시": {"예산":"40만원", "유입":"+30%", "매출":"+22%", "상권":"전 상권",       "icon":"🌸", "color":"#F5F0FF"},
+        "시즌 한정 메뉴 출시": {"예산":"40만원", "유입":"+30%", "매출":"+22%", "상권":"전 상권",       "icon":"🌸", "color":"#F5E6D6"},
     }
 
     cols = st.columns(5)
@@ -574,7 +574,7 @@ with tab2:
             labels=["임대료","인건비","재료비","기타(공과금 등)"],
             values=[rent, labor, material, 80],
             hole=0.45,
-            marker=dict(colors=["#5b3a29","#D9A15B","#7EB8F7","#BDD7F5"]),
+            marker=dict(colors=["#5b3a29","#D9A15B","#E7BC84","#F3D2A7"]),
             textinfo="label+percent",
             textfont=dict(size=12),
         ))
@@ -595,7 +595,7 @@ with tab2:
             labels=invest_data["비교 항목"].tolist(),
             values=invest_data[cost_col].tolist(),
             hole=0.45,
-            marker=dict(colors=["#5b3a29","#8b5e3c","#D9A15B","#7EB8F7","#BDD7F5"]),
+            marker=dict(colors=["#5b3a29","#8b5e3c","#D9A15B","#E7BC84","#F3D2A7"]),
             textinfo="label+percent",
             textfont=dict(size=12),
         ))
@@ -623,7 +623,7 @@ with tab3:
 
     t_cols = st.columns(5)
     medals = ["🥇","🥈","🥉","4️⃣","5️⃣"]
-    medal_colors = ["#FFD700","#C0C0C0","#CD7F32","#D9A15B","#7EB8F7"]
+    medal_colors = ["#FFD700","#C0C0C0","#CD7F32","#D9A15B","#E7BC84"]
     for col, (_, row), medal, mc in zip(t_cols, top5_df.iterrows(), medals, medal_colors):
         with col:
             name = row["매장명"].replace("젤라또 ","")
@@ -694,7 +694,7 @@ with tab3:
         y=filtered_base["월매출(만원)"],
         marker=dict(
             color=filtered_base["월매출(만원)"],
-            colorscale=[[0,"#BDD7F5"],[0.5,"#D9A15B"],[1,"#5b3a29"]],
+            colorscale=[[0,"#F3D2A7"],[0.5,"#D9A15B"],[1,"#5b3a29"]],
             showscale=False,
         ),
         text=filtered_base["월매출(만원)"].apply(lambda v: f"{int(v):,}만"),
@@ -720,7 +720,7 @@ with tab3:
     sangkwon_avg = base_df.groupby("상권 유형")["월매출(만원)"].mean().reset_index()
     sangkwon_avg = sangkwon_avg.sort_values("월매출(만원)", ascending=False)
 
-    sk_colors = {"관광":"#5b3a29","오피스":"#D9A15B","주거":"#7EB8F7","대학가":"#BDD7F5"}
+    sk_colors = {"관광":"#5b3a29","오피스":"#D9A15B","주거":"#E7BC84","대학가":"#F3D2A7"}
     fig_sk = go.Figure(go.Bar(
         x=sangkwon_avg["상권 유형"],
         y=sangkwon_avg["월매출(만원)"],
@@ -847,7 +847,7 @@ with tab4:
             if row["항목"] in ["총 초기 투자비"]:
                 return ["background-color:#F7E7D3;font-weight:700;color:#5b3a29"]*len(row)
             elif row["항목"] in ["예상 월매출","예상 투자 회수"]:
-                return ["background-color:#F0FBF0;font-weight:600;color:#2E7D32"]*len(row)
+                return ["background-color:#F3E1CC;font-weight:600;color:#2E7D32"]*len(row)
             return [""]*len(row)
 
         styled = display_cost.style.apply(highlight_total, axis=1)\
@@ -865,7 +865,7 @@ with tab4:
         fig_cost = go.Figure(go.Bar(
             x=["소형(10평)","중형(15평)","대형(20평)"],
             y=[5500, 7300, 9700],
-            marker_color=["#BDD7F5","#D9A15B","#5b3a29"],
+            marker_color=["#F3D2A7","#D9A15B","#5b3a29"],
             text=["5,500만원","7,300만원","9,700만원"],
             textposition="outside",
             textfont=dict(size=12, color="#5b3a29"),
@@ -888,7 +888,7 @@ with tab4:
     st.markdown('<p class="section-title">🗺️ 상권별 창업 가이드</p>', unsafe_allow_html=True)
 
     sk_icons = {"오피스 상권":"🏢","대학가 상권":"🎓","주거 상권":"🏘️","관광 상권":"🗼"}
-    sk_colors_card = {"오피스 상권":"#E8F4FD","대학가 상권":"#F0FBF0","주거 상권":"#FFF7E8","관광 상권":"#F5F0FF"}
+    sk_colors_card = {"오피스 상권":"#F7E7D3","대학가 상권":"#F3E1CC","주거 상권":"#FFF7E8","관광 상권":"#F5E6D6"}
     sk_border = {"오피스 상권":"#D9A15B","대학가 상권":"#2E9E6B","주거 상권":"#E8742A","관광 상권":"#9B59B6"}
 
     sk_cols = st.columns(4)
