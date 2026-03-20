@@ -289,7 +289,7 @@ st.markdown("""
 <div class="hero-banner">
   <div style="text-align: center;">
     <div class="hero-tag">🍦 PREMIUM GELATO FRANCHISE</div>
-    <p class="hero-title">GELATICO</p>
+    <h1 class="hero-title">GELATICO</p>
     <p class="hero-sub">젤라티코 — 이탈리아의 맛, 당신의 매장에서</p>
   </div>
 </div>
