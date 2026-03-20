@@ -90,19 +90,6 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 
     pointer-events: none;
 }
-.hero-banner::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background-image: radial-gradient(
-        rgba(255,255,255,0.05) 1px,
-        transparent 1px
-    );
-    background-size: 20px 20px;
-
-    opacity: 0.3;
-}
 .hero-title {
     font-family: 'Playfair Display', serif !important;
     font-size: clamp(72px, 9vw, 160px);
