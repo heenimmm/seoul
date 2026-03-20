@@ -361,7 +361,7 @@ top5_names = top_df["매장명"].tolist()[:5]
 st.markdown("""
 <div class="hero-banner">
   <div class="hero-content">
-    <div class="hero-tag">🍦 달콤한 창업, 젤라티코와 함</div>
+    <div class="hero-tag">🍦 달콤한 창업, 젤라티코와 함께</div>
     <h1 class="hero-title">GELATICO</h1>
     <p class="hero-sub">젤라티코 — 이탈리아의 맛, 당신의 매장에서</p>
   </div>
