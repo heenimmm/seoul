@@ -314,30 +314,6 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
     }
 }
 
-.stApp {
-    background: linear-gradient(
-        180deg,
-        #FFF8E7 0%,
-        #F7E7D3 40%,
-        #F3E1CC 100%
-    );
-    position: relative;
-    z-index: 1;
-}
-.stApp::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-
-    background: radial-gradient(
-        circle at 20% 10%,
-        rgba(255, 240, 220, 0.4),
-        transparent 40%
-    );
-
-    pointer-events: none;
-    z-index: 0;
-}
 </style>
 """, unsafe_allow_html=True)
 
