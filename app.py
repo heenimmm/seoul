@@ -28,31 +28,48 @@ html, body, [class*="css"] { font-family: 'Noto Sans KR', sans-serif; }
 
 /* 탭 스타일 */
 .stTabs [data-baseweb="tab-list"] {
-    gap: 0px;
+    gap: 10px;
     background: #5B3A29;
-    border-radius: 12px 12px 0 0;
-    padding: 6px 6px 0 6px;
+    border-radius: 16px 16px 0 0;
+    padding: 10px 14px 0 14px;
+
+    display: flex;
+    justify-content: center;   /* 🔥 가운데 정렬 */
+    align-items: flex-end;
 }
+
 .stTabs [data-baseweb="tab"] {
     background: transparent;
-    color: rgba(255,255,255,0.72);
-    font-weight: 600;
-    font-size: 15px;
-    padding: 12px 28px;
-    border-radius: 8px 8px 0 0;
+    color: rgba(255,255,255,0.78);
+    font-weight: 700;
+    font-size: 18px;           /* 🔥 탭 글씨 키움 */
+    padding: 16px 34px;        /* 🔥 탭 크기 키움 */
+    border-radius: 12px 12px 0 0;
     border: none;
-    letter-spacing: 0.3px;
-    transition: all 0.2s;
+    letter-spacing: 0.2px;
+    transition: all 0.25s ease;
+
+    transform: translateY(0);
 }
+
+.stTabs [data-baseweb="tab"]:hover {
+    background: rgba(255,255,255,0.08);
+    color: #FFF5E6;
+    transform: translateY(-3px);   /* 🔥 살짝 뜨는 효과 */
+}
+
 .stTabs [aria-selected="true"] {
     background: #FFFDF8 !important;
     color: #5B3A29 !important;
+    box-shadow: 0 4px 14px rgba(91,58,41,0.12);
+    transform: translateY(-2px);
 }
+
 .stTabs [data-baseweb="tab-panel"] {
     background: #FFFDF8;
-    border-radius: 0 0 12px 12px;
+    border-radius: 0 0 16px 16px;
     border: 1px solid #E8D8C3;
-    padding: 32px 36px;
+    padding: 36px 40px;
 }
 
 /* 헤더 배너 */
